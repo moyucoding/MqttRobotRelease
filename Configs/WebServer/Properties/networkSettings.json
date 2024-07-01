@@ -1,0 +1,14 @@
+{
+    "brokerIp": "127.0.0.1",
+    "brokerPort": 1883,
+    "productName": "Class",
+    "mapName": "Map",
+    "mapDir": "/app/Data/Maps/",
+    "robots": [
+        {
+            "name": "Robot1",
+            "arm": false,
+            "agv": true
+        }
+    ]
+}

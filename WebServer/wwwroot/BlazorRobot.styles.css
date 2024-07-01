@@ -1,0 +1,22 @@
+/* _content/BlazorRobot/Pages/Index.razor.rz.scp.css */
+.viewermenu[b-fzv70061cr] {
+    
+}
+.viewermain[b-fzv70061cr] {
+    flex-direction: row;
+}
+.viewerpage[b-fzv70061cr] {
+}
+/* _content/BlazorRobot/Pages/Unity/ViewerUnity.razor.rz.scp.css */
+.viewerunity[b-vg49gca949] {
+    flex-direction: row;
+}
+.viewermiddle[b-vg49gca949] {
+    flex-direction: row;
+}
+.viewerright[b-vg49gca949] {
+    position: right;
+    display: flex;
+    flex-direction: column;
+}
+

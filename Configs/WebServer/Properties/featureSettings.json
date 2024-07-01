@@ -1,0 +1,7 @@
+{
+    "camera": false,
+    "map" : true,
+    "pointcloud" : false,
+    "wall" : true,
+    "track" : false
+}

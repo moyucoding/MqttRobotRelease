@@ -1,0 +1,19 @@
+{
+    "mqtt":
+    {
+        "brokerip": "127.0.0.1",
+        "brokerport": 1883,
+        "username": "Python_Map_Server_1",
+        "productid": "Class"
+    },
+    "database":
+    {
+        "path": "/app/Data/my_database.db"
+    },
+    "maps":
+    {
+        "websocketip": "0.0.0.0",
+        "websocketport": 1884,
+        "path": "/app/Data/Maps/"
+    }
+}
