@@ -5,4 +5,4 @@ ADD . /app
 
 EXPOSE 51311
 RUN dotnet dev-certs https
-ENTRYPOINT ["dotnet", "BlazorRobot.dll", "--urls=https://0.0.0.0:51311/"]
+ENTRYPOINT ["dotnet", "BlazorRobot.dll", "--urls=https://0.0.0.0:50000/"]

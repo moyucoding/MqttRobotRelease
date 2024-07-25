@@ -98,7 +98,7 @@ class DBMqtt:
                         "name":zone[2]
                     })
                 self.zonePubMsg = json.dumps(topub)
-            self.mqttClient.publish(self.zonePubTopic, self.zonePubMsg)
+            self.mqttClient.publish(self.zonePubTopic, self.zonePubMsg, retain=True)
             self.log("Zone Published")
         except Exception as e:
             self.log(f"An error occurred: {e}")
@@ -173,7 +173,7 @@ class DBMqtt:
                         "md5":map[7]
                     })
                 self.mapPubMsg = json.dumps(topub)
-            self.mqttClient.publish(self.mapPubTopic, self.mapPubMsg)
+            self.mqttClient.publish(self.mapPubTopic, self.mapPubMsg, retain=True)
             self.log("Map Published")
         except Exception as e:
             self.log(f"An error occurred: {e}")
@@ -279,7 +279,7 @@ class DBMqtt:
                         }
                     })
                 self.agvpointPubMsg = json.dumps(topub)
-            self.mqttClient.publish(self.agvpointPubTopic,self.agvpointPubMsg)
+            self.mqttClient.publish(self.agvpointPubTopic,self.agvpointPubMsg, retain=True)
             self.log("AgvPoint Published")
         except Exception as e:
             self.log(f"An error occurred: {e}")
@@ -371,7 +371,7 @@ class DBMqtt:
                         "joint": listj
                     })
                 self.armpointPubMsg = json.dumps(topub)
-            self.mqttClient.publish(self.armpointPubTopic, self.armpointPubMsg)
+            self.mqttClient.publish(self.armpointPubTopic, self.armpointPubMsg, retain=True)
             self.log("ArmPoint Published")
         except Exception as e:
             self.log(f"An error occurred: {e}")
@@ -458,7 +458,7 @@ class DBMqtt:
                         }
                     })
                 self.wallPubMsg = json.dumps(topub)
-            self.mqttClient.publish(self.wallPubTopic, self.wallPubMsg)
+            self.mqttClient.publish(self.wallPubTopic, self.wallPubMsg, retain=True)
             self.log("Wall Published")
         except Exception as e:
             self.log(f"An error occurred: {e}")
@@ -555,7 +555,7 @@ class DBMqtt:
                         "poses":poses
                     })
                     self.trackPubMsg = json.dumps(topub)
-            self.mqttClient.publish(self.trackPubTopic, self.trackPubMsg)
+            self.mqttClient.publish(self.trackPubTopic, self.trackPubMsg, retain=True)
             self.log("Track Published")
         except Exception as e:
             self.log(f"An error occurred: {e}")

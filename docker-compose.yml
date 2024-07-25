@@ -10,13 +10,14 @@ services:
       - ./Data:/app/Data
       - ./Configs/WebServer/Properties:/app/Properties
     network_mode: host
+    # restart: always
   jihua-mqttdb:
     build: 
       context: ./MapServer
-      network: host
     image: mqttrobot_mapserver
     container_name: mqttrobot_mapserver
     volumes:
       - ./Data:/app/Data
       - ./Configs/MapServer/Configs/:/app/Configs
     network_mode: host
+    # restart: always

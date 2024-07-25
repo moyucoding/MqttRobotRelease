@@ -11,12 +11,3 @@
 .viewerunity[b-vg49gca949] {
     flex-direction: row;
 }
-.viewermiddle[b-vg49gca949] {
-    flex-direction: row;
-}
-.viewerright[b-vg49gca949] {
-    position: right;
-    display: flex;
-    flex-direction: column;
-}
-
