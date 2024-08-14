@@ -47,5 +47,14 @@
 1. 启动MQTT Broker
 2. 启动docker
 ```bash
-    docker-compose up
+    cd Scripts/
+    #如果安装的是docker-compose: 如Ubuntu 18.04
+    ./docker_compose_v1.sh
+    #如果安装的是docker-compose-v2: 如Ubuntu 22.04
+    ./docker_compose_v2.sh
+```
+3. 清理docker
+```bash
+    cd Scripts/
+    ./docker_delete.sh
 ```

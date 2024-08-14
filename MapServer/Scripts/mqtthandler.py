@@ -554,7 +554,7 @@ class DBMqtt:
                         "type":track[4],
                         "poses":poses
                     })
-                    self.trackPubMsg = json.dumps(topub)
+                self.trackPubMsg = json.dumps(topub)
             self.mqttClient.publish(self.trackPubTopic, self.trackPubMsg, retain=True)
             self.log("Track Published")
         except Exception as e:
@@ -570,6 +570,8 @@ class DBMqtt:
             topub["timestamp"] = self.req_ts
             topub["cmd"] = req["cmd"]
             if cmd == "Add" or cmd == "Edit":
+                if not req["data"]["track"]["zone"]:
+                    return
                 poses = req["data"]["track"]["poses"]
                 poselist = []
                 for pose in poses:
