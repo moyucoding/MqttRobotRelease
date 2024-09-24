@@ -1,9 +1,9 @@
-FROM m.daocloud.io/docker.io/library/python:3.9-slim
+FROM m.daocloud.io/docker.io/library/python:3.9-slim-bullseye
 
 WORKDIR /app
 ADD . /app
 
-RUN pip3 install -r ./requirements.txt
+RUN pip3 install --progress-bar off -r ./requirements.txt
 
 EXPOSE 1884
 

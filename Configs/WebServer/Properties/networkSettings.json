@@ -1,12 +1,24 @@
 {
-    "brokerIp": "127.0.0.1",
-    "brokerPort": 1883,
+    "mqtt":
+    {
+        "brokerIp": "127.0.0.1",
+        "brokerPort": 1883
+    },
+    "websocket":
+    {
+        "serverIp":"127.0.0.1",
+        "serverPort":1884
+    },
     "productName": "Class",
     "mapName": "Map",
-    "mapDir": "/app/Data/Maps/",
     "robots": [
         {
             "name": "Robot1",
+            "arm": false,
+            "agv": true
+        },
+        {
+            "name": "Robot2",
             "arm": false,
             "agv": true
         }

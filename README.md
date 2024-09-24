@@ -29,11 +29,18 @@
 3. 配置示教器，配置Configs/WebServer/Properties/networkSettings.json
 ```json
 {
-    "brokerIp": "127.0.0.1", // MQTT Broker的ip
-    "brokerPort": 1883, // MQTT Broker的端口
+    "mqtt": //MQTT配置
+    {
+        "brokerIp": "127.0.0.1", // MQTT Broker的ip
+        "brokerPort": 1883, // MQTT Broker的端口
+    },
+    "websocket": //WebSocket配置
+    {
+        "serverIp":"127.0.0.1", // WebSocket服务器ip
+        "serverPort":1884 // WebSocket服务器端口
+    },
     "productName": "Class", // 产品名称
     "mapName": "Map", // 地图名称
-    "mapDir": "/app/Data/Maps/", // 地图文件存放位置
     "robots": [ // 机器人配置
         {
             "name": "Robot1", // 机器人id

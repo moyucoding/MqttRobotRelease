@@ -8,7 +8,7 @@
 {
     "mqtt":
     {
-        "brokerip": "10.206.44.5", // MQTT Broker的ip
+        "brokerip": "127.0.0.1", // MQTT Broker的ip
         "brokerport": 1883, // MQTT Broker的端口号
         "username": "Python_Map_Server_1", // MQTT连接名称
         "productid": "Class" // 产品的id
@@ -19,9 +19,9 @@
     },
     "maps":
     {
-        "websocketip": "10.206.44.5", // 文件服务器ip
+        "websocketip": "127.0.0.1", // 文件服务器ip
         "websocketport": 1884, // 文件服务器端口号
-        "path": "/home/jihua/zhong/twins/mqttdb/Data/Maps/" // 地图文件保存路径
+        "path": "/home/ubuntu/mqttdb/Data/Maps/" // 地图文件保存路径
     }
 }
 ```
