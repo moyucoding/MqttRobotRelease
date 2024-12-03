@@ -1,6 +1,19 @@
-version: '3'
-
 services:
+  emqx:
+    image: emqx/emqx:5.8.2
+    container_name: mqttrobot_emqx
+    build: .
+    environment:
+      EMQX_MQTT__MAX_PACKET_SIZE: 100MB
+    ports:
+      - "1883:1883"
+      - "8083:8083"
+      - "8084:8084"
+      - "8883:8883"
+      - "18083:18083"
+    volumes:
+      - ./data:/opt/emqx/data
+      - ./log:/opt/emqx/log
   jihua-blazor:
     build: 
       context: ./WebServer
@@ -10,7 +23,9 @@ services:
       - ./Data:/app/Data
       - ./Configs/WebServer/Properties:/app/Properties
     network_mode: host
-    # restart: always
+    depends_on:
+      - emqx
+    restart: unless-stopped
   jihua-mqttdb:
     build: 
       context: ./MapServer
@@ -20,4 +35,6 @@ services:
       - ./Data:/app/Data
       - ./Configs/MapServer/Configs/:/app/Configs
     network_mode: host
-    # restart: always
+    depends_on:
+      - emqx
+    restart: unless-stopped

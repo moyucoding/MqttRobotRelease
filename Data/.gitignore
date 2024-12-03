@@ -1,0 +1,4 @@
+configs/
+mnesia/
+cluster.uuid
+node.uuid

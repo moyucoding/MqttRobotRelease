@@ -1,4 +1,4 @@
-FROM m.daocloud.io/docker.io/library/python:3.9-slim-bullseye
+FROM python:3.9-slim-bullseye
 
 WORKDIR /app
 ADD . /app
